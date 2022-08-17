@@ -106,6 +106,8 @@ const styles = StyleSheet.create({
 		fontFamily: 'Times-Roman',
 		position: 'relative',
 		paddingHorizontal: 35,
+		fontWeight: 'bold',
+		color:'black',
 
 	},
 	text3: {
@@ -114,6 +116,8 @@ const styles = StyleSheet.create({
 		fontFamily: 'Times-Roman',
 		position: 'relative',
 		paddingHorizontal: 35,
+		fontWeight: 'bold',
+		color:'black',
 
 	},
 	image: {
@@ -768,8 +772,8 @@ function CustomSentLettersList(props) {
 												}
 											</TableCell>
 											<TableCell style={{paddingLeft: "10px"}} scope="row" padding="none">
-												{letter.client.customerClients[0].customerInfo.userInfo.name + " " +
-												letter.client.customerClients[0].customerInfo.userInfo.surname}
+												{letter.client.customerClients[0].customerInfo?.userInfo?.name + " " +
+												letter.client.customerClients[0].customerInfo?.userInfo?.surname}
 											</TableCell>
 											{/*<TableCell style={{paddingLeft: "10px"}} scope="row" padding="none">*/}
 
