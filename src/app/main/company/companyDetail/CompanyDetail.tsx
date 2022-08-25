@@ -222,9 +222,7 @@ function CompanyDetail(props: any) {
             } )
 
             api.getClient(routingData?.clientId).then(response => {
-                console.log("***** companyDetail response ",response);
                 setClient(response);
-                console.log("client.vatNumber: ",client.vatNumber)
 
                 const {company,addressList,customerClients, founderOwner, documents , addressNewList} = response;
                 if (company != null) {
@@ -233,8 +231,6 @@ function CompanyDetail(props: any) {
                 }
                 setCustomerClients(customerClients);
                 setDocumentsList(documents)
-                console.log("CompanyDetail founderOwner",founderOwner)
-                console.log("founderOwnerNEw***************",company.directorDetails[0].maritalStatus)
                 if (founderOwner != null) {
                     setFounderOwner(founderOwner);
                 } else {
@@ -714,7 +710,6 @@ function CompanyDetail(props: any) {
                                                                                value={company?.vatPeriod}/>
 
                                                                 </td>
-                                                                {console.log("*********company?.vatPeriod",company?.vatPeriod)}
                                                             </tr>
                                                             </tbody>
                                                         </table>
